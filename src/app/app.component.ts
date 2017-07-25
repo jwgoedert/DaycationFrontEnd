@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Http, Headers } from '@angular/http';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-root',
@@ -10,10 +11,17 @@ export class AppComponent {
   private headers = new Headers({'Content-Type': 'application/json'});
   private heroesUrl = 'http://localhost:8080/v1';  // URL to web api
   // private heroesUrl = 'https://735cb16c.ngrok.io/v1';  // URL to web api
- constructor(public http: Http) {
-    this.http = http;
+ constructor(
+    public http: Http,
+    private router: Router,
+  ) {
+  this.router = router;  
+  this.http = http;
   }
-  title = 'app';
+  title = 'Friend';
+  goToDashboard(){
+    this.router.navigate(['profile']);
+  }
   seedTest(){
     return this.http
     .get(`${this.heroesUrl}/seed`).map(info =>{
@@ -32,6 +40,7 @@ export class AppComponent {
     }).subscribe(newinfo=> {
       return newinfo;
     })
+
     
 
   }

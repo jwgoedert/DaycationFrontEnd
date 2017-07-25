@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { ModuleWithProviders, NgModule } from '@angular/core';
 import { HttpModule }    from '@angular/http';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { SignupComponent } from './signup/signup.component';
@@ -9,6 +10,10 @@ import { MyTripsComponent } from './my-trips/my-trips.component';
 import { TripPreviewComponent } from './trip-preview/trip-preview.component';
 import { TripViewerComponent } from './trip-viewer/trip-viewer.component';
 import { ProfileComponent } from './profile/profile.component';
+
+import { SignupService } from './services/signup.service';
+import { routing } from './app.routing';
+
 
 @NgModule({
   declarations: [
@@ -23,6 +28,7 @@ import { ProfileComponent } from './profile/profile.component';
   imports: [
     BrowserModule,
     HttpModule,
+    routing,
   ],
   providers: [],
   bootstrap: [AppComponent]
