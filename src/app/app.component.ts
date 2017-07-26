@@ -5,7 +5,7 @@ import { Router } from "@angular/router";
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   private headers = new Headers({'Content-Type': 'application/json'});
@@ -40,8 +40,18 @@ export class AppComponent {
     }).subscribe(newinfo=> {
       return newinfo;
     })
-
-    
-
+  }
+  geoLocationTest(){
+    if("geolocation" in navigator){
+      console.log("you are good to be located")
+      this.getGeoCoords();
+    } else {
+      console.log("you're off the grid...no location available.")
+    }
+  }
+  getGeoCoords(){
+    navigator.geolocation.getCurrentPosition(function(position) {
+  console.log(`${position.coords.latitude},${position.coords.longitude}`);
+});
   }
 }

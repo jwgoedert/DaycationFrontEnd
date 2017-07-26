@@ -28,15 +28,15 @@ const appRoutes: Routes = [
   },
   {
     path:'signup',
-    component: ProfileComponent,
+    component: SignupComponent,
   },
   {
     path:'trip-preview',
-    component: ProfileComponent,
+    component: TripPreviewComponent,
   },
   {
     path:'trip-viewer',
-    component: ProfileComponent,
+    component: TripViewerComponent,
   },
 
 

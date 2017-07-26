@@ -13,6 +13,7 @@ import { ProfileComponent } from './profile/profile.component';
 
 import { SignupService } from './services/signup.service';
 import { routing } from './app.routing';
+import { TestsComponent } from './tests/tests.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { routing } from './app.routing';
     MyTripsComponent,
     TripPreviewComponent,
     TripViewerComponent,
-    ProfileComponent
+    ProfileComponent,
+    TestsComponent
   ],
   imports: [
     BrowserModule,
