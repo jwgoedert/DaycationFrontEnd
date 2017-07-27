@@ -11,6 +11,7 @@ import { Subscription } from 'rxjs/subscription';
 export class SignupComponent implements OnInit {
   // public response: number;
   public response: String;
+  public id: number;
 
   constructor(
     public signupService: SignupService,
@@ -19,14 +20,19 @@ export class SignupComponent implements OnInit {
 
   ngOnInit() {
   }
-  onSubmit(signUpForm: NgForm) {
+   async onSubmit(signUpForm: NgForm) {
     console.log("Form Value:",signUpForm.value);  // { first: '', last: '' }
     // console.log(signUpForm.valid);  // false
-    this.signupService.checkUser(signUpForm.value.name, signUpForm.value.password);
-    // setTimeout(()=>{
+    
+   this.id = await this.signupService.checkUser(signUpForm.value.name, signUpForm.value.password);
+   await this.resultMessage();
+   console.log("THIS IS ...", this.id) 
+   // setTimeout(()=>{
     //   return this.showId();
     // },100) 
-    // this.resultMessage();
+    // setTimeout(()=>  this.resultMessage(), 150);
+    // this.id =  this.showId();
+    console.log("id", this.id)
   }
   showId(): number{
     console.log("ReceivedID", this.signupService.id);

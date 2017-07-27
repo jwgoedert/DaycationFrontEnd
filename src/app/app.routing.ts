@@ -9,6 +9,8 @@ import { TripPreviewComponent } from './pages/trip-preview/trip-preview.componen
 import { TripViewerComponent } from './pages/trip-viewer/trip-viewer.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { TestsComponent } from './pages/tests/tests.component';
+import { LikesComponent } from './pages/likes/likes.component';
+import { ChoicesComponent } from './pages/choices/choices.component';
 
 const appRoutes: Routes = [
   {
@@ -42,7 +44,13 @@ const appRoutes: Routes = [
   {
     path:'tests',
     component: TestsComponent,
-  }
+  },{
+    path:'likes',
+    component: LikesComponent,
+  },{
+    path:'choices',
+    component: ChoicesComponent,
+  },
 
 
 ]

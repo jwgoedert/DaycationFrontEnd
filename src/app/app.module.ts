@@ -12,6 +12,8 @@ import { TripPreviewComponent } from './pages/trip-preview/trip-preview.componen
 import { TripViewerComponent } from './pages/trip-viewer/trip-viewer.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { TestsComponent } from './pages/tests/tests.component';
+import { LikesComponent } from './pages/likes/likes.component';
+import { ChoicesComponent } from './pages/choices/choices.component';
 
 import { SignupService } from './shared/services/signup.service';
 import { TestsService } from './shared/services/tests.service';
@@ -29,6 +31,8 @@ import { routing } from './app.routing';
     TripViewerComponent,
     ProfileComponent,
     TestsComponent,
+    LikesComponent,
+    ChoicesComponent,
   ],
   imports: [
     BrowserModule,
