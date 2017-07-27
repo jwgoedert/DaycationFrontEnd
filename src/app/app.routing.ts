@@ -2,12 +2,12 @@ import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule} from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { SignupComponent } from './signup/signup.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { MyTripsComponent } from './my-trips/my-trips.component';
-import { TripPreviewComponent } from './trip-preview/trip-preview.component';
-import { TripViewerComponent } from './trip-viewer/trip-viewer.component';
-import { ProfileComponent } from './profile/profile.component';
+import { SignupComponent } from './pages/signup/signup.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { MyTripsComponent } from './pages/my-trips/my-trips.component';
+import { TripPreviewComponent } from './pages/trip-preview/trip-preview.component';
+import { TripViewerComponent } from './pages/trip-viewer/trip-viewer.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 const appRoutes: Routes = [
   {

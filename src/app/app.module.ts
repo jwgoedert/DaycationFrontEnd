@@ -2,18 +2,21 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { HttpModule }    from '@angular/http';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { SignupComponent } from './signup/signup.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { MyTripsComponent } from './my-trips/my-trips.component';
-import { TripPreviewComponent } from './trip-preview/trip-preview.component';
-import { TripViewerComponent } from './trip-viewer/trip-viewer.component';
-import { ProfileComponent } from './profile/profile.component';
+import { SignupComponent } from './pages/signup/signup.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { MyTripsComponent } from './pages/my-trips/my-trips.component';
+import { TripPreviewComponent } from './pages/trip-preview/trip-preview.component';
+import { TripViewerComponent } from './pages/trip-viewer/trip-viewer.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { TestsComponent } from './pages/tests/tests.component';
 
-import { SignupService } from './services/signup.service';
+import { SignupService } from './shared/services/signup.service';
+import { TestsService } from './shared/services/tests.service';
+import { AuthenticationService } from './shared/services/authentication.service';
 import { routing } from './app.routing';
-import { TestsComponent } from './tests/tests.component';
 
 
 @NgModule({
@@ -31,8 +34,14 @@ import { TestsComponent } from './tests/tests.component';
     BrowserModule,
     HttpModule,
     routing,
+    FormsModule,
   ],
-  providers: [],
+  providers: [
+    TestsService,
+    AuthenticationService,
+    SignupService,
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

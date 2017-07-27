@@ -50,8 +50,32 @@ export class AppComponent {
     }
   }
   getGeoCoords(){
-    navigator.geolocation.getCurrentPosition(function(position) {
-  console.log(`${position.coords.latitude},${position.coords.longitude}`);
-});
+    console.log("GEOCOORDS");
+    // console.log(navigator.geolocation.getCurrentPosition(pos => console.log(pos)));
+//     navigator.geolocation.getCurrentPosition(function(position) {
+//       console.log("inside navigator");
+//   console.log(`${position.coords.latitude},${position.coords.longitude}`);
+// });
+navigator.geolocation.getCurrentPosition(this.success, this.error, this.options);
+
   }
+options = {
+  enableHighAccuracy: true,
+  timeout: 5000,
+  maximumAge: 0
+};
+
+ success(pos) {
+  var crd = pos.coords;
+
+  console.log('Your current position is:');
+  console.log(`Latitude : ${crd.latitude}`);
+  console.log(`Longitude: ${crd.longitude}`);
+  console.log(`More or less ${crd.accuracy} meters.`);
+};
+
+error(err) {
+  console.warn(`ERROR(${err.code}): ${err.message}`);
+};
+
 }
