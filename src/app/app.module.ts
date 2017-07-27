@@ -28,13 +28,14 @@ import { routing } from './app.routing';
     TripPreviewComponent,
     TripViewerComponent,
     ProfileComponent,
-    TestsComponent
+    TestsComponent,
   ],
   imports: [
     BrowserModule,
     HttpModule,
     routing,
     FormsModule,
+  
   ],
   providers: [
     TestsService,

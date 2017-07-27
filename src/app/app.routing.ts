@@ -8,6 +8,7 @@ import { MyTripsComponent } from './pages/my-trips/my-trips.component';
 import { TripPreviewComponent } from './pages/trip-preview/trip-preview.component';
 import { TripViewerComponent } from './pages/trip-viewer/trip-viewer.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { TestsComponent } from './pages/tests/tests.component';
 
 const appRoutes: Routes = [
   {
@@ -38,6 +39,10 @@ const appRoutes: Routes = [
     path:'trip-viewer',
     component: TripViewerComponent,
   },
+  {
+    path:'tests',
+    component: TestsComponent,
+  }
 
 
 ]
