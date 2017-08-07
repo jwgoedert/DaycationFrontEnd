@@ -5,4 +5,44 @@
 <!--Multiselect dropdown of Move Choices-->
 
 <!--Toolbar with profile, current, mytrips, likes-->
-<h1>Profile</h1>
+<div class="category">
+  <h1>Profile</h1>
+
+
+  <ng2-dropdown class="category">
+      <ng2-dropdown-button class="category">
+          Views
+      </ng2-dropdown-button>
+      <ng2-dropdown-menu>
+          <ng2-menu-item [preventClose]='true' *ngFor="let view of views">
+              {{ view }}
+          </ng2-menu-item>
+          <div class='ng2-menu-divider'></div>
+      </ng2-dropdown-menu>
+  </ng2-dropdown>
+    
+    <ng2-dropdown class="category">
+      <ng2-dropdown-button class="category">
+          Foods
+      </ng2-dropdown-button>
+      <ng2-dropdown-menu>
+          <ng2-menu-item [preventClose]='true' *ngFor="let food of foods">
+              {{ food }}
+          </ng2-menu-item>
+          <div class='ng2-menu-divider'></div>
+      </ng2-dropdown-menu>
+  </ng2-dropdown>
+    
+    <ng2-dropdown class="category">
+      <ng2-dropdown-button class="category">
+          Moves 
+      </ng2-dropdown-button>
+      <ng2-dropdown-menu>
+          <ng2-menu-item [preventClose]='true' *ngFor="let move of moves  ">
+              {{ move }}
+          </ng2-menu-item>
+          <div class='ng2-menu-divider'></div>
+      </ng2-dropdown-menu>
+  </ng2-dropdown>
+    
+</div>

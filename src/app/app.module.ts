@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { MaterialModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Ng2DropdownModule } from 'ng2-material-dropdown';
 
 
 import { AppComponent } from './app.component';
@@ -44,6 +45,7 @@ import { routing } from './app.routing';
     FormsModule,
     MaterialModule,
     BrowserAnimationsModule,
+    Ng2DropdownModule,
   ],
   providers: [
     TestsService,
