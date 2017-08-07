@@ -1,9 +1,59 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+ <div style="text-align:center">
   <h1>
     Welcome {{title}}!
   </h1>
 </div>
 <router-outlet></router-outlet>
-<button type="button" primary class="menuItems btn btn-success" style="width:100%" routerLink="/tests" >Test Page</button>
 
+
+<div>
+  <!-- <md-menu x-position="before" #menu="mdMenu">
+    <button md-menu-item>Option 1</button>
+    <button md-menu-item>Option 2</button>
+  </md-menu>
+
+  <md-card>
+    <button md-button>All</button>
+    <button md-raised-button>Of</button>
+    <button md-raised-button color="primary">The</button>
+    <button md-raised-button color="accent">Buttons</button>
+  </md-card>
+
+  <span class="done">
+    <button md-fab>
+      <md-icon>check circle</md-icon>
+    </button>
+  </span> -->
+   <!-- <md-toolbar class="bottom-bar"color="primary">  -->
+    <!-- <span><md-icon>mood</md-icon></span> -->
+
+    <md-toolbar-row class="bottom-bar-top">
+      <button md-button
+        type="button" 
+        primary class=" btn btn-primary" 
+        style="width:100%" 
+        routerLink="/tests" 
+        >
+        Test Page
+      </button> 
+    </md-toolbar-row>
+
+    <md-toolbar class="bottom-bar"color="primary">
+
+      <!-- <span>Yay, Material in Angular 2!</span>
+      <md-menu #menu="mdMenu"></md-menu>
+      <button [mdMenuTriggerFor]="menu"></button>
+      <button md-icon-button [md-menu-trigger-for]="menu">
+        <md-icon>more_vert</md-icon>
+        <md-icon svgIcon="thumbs-up"></md-icon>
+      </button> -->
+    <!-- </md-toolbar-row> -->
+      <button  class="menu" md-raised-button routerLink="/profile" >Profile</button>
+      <button  class="menu" md-raised-button routerLink="/mytrips" >Current</button>
+      <button  class="menu" md-raised-button routerLink="/dashboard" >Dashboard</button>
+      <button  class="menu" md-raised-button routerLink="/mytrips" >My Trips</button>
+      <button  class="menu" md-raised-button routerLink="/likes" >Likes</button>
+
+  </md-toolbar>  
+</div>

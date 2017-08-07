@@ -27,11 +27,6 @@ export class SignupComponent implements OnInit {
    this.id = await this.signupService.checkUser(signUpForm.value.name, signUpForm.value.password);
    await this.resultMessage();
    console.log("THIS IS ...", this.id) 
-   // setTimeout(()=>{
-    //   return this.showId();
-    // },100) 
-    // setTimeout(()=>  this.resultMessage(), 150);
-    // this.id =  this.showId();
     console.log("id", this.id)
   }
   showId(): number{

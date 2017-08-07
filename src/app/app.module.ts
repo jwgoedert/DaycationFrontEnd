@@ -3,6 +3,9 @@ import { ModuleWithProviders, NgModule } from '@angular/core';
 import { HttpModule }    from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { MaterialModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 import { AppComponent } from './app.component';
 import { SignupComponent } from './pages/signup/signup.component';
@@ -39,7 +42,8 @@ import { routing } from './app.routing';
     HttpModule,
     routing,
     FormsModule,
-  
+    MaterialModule,
+    BrowserAnimationsModule,
   ],
   providers: [
     TestsService,

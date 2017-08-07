@@ -3,21 +3,11 @@
   <h1>
     TestingZone {{title}}!
   </h1>
-</div>git 
- <ul>
-  <li>
-      <button class="menuItems" (click)="geoTest()">GEO!?</button>
-  </li>
-  <li>
-      <button class="menuItems"(click)="goToDashboard2()">Dashboard</button>
-  </li> 
-  <li>
-      <button class="menuItems" (click)="seedTest2()">SeedDB</button>
-  </li>  
-  <li>
-      <button class="menuItems" (click)="signUpTest2()">SignUpTest</button>
-  </li>
-</ul> 
+</div>
+      <button md-raised-button color="primary" class="menuItems" (click)="geoTest()">GEO!?</button>
+      <button md-raised-button class="menuItems"(click)="goToDashboard2()">Dashboard</button> 
+      <button md-raised-button class="menuItems" (click)="seedTest2()">SeedDB</button>  
+      <button md-raised-button class="menuItems" (click)="signUpTest2()">SignUpTest</button>
  <a routerLink="/dashboard">Dashboard</a> 
 
 <router-outlet></router-outlet>

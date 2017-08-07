@@ -23,8 +23,10 @@ export class SignupService {
       this.id = JSON.parse(id["_body"]);
       console.log("ID is:", id);
       this.currentUser = username;
+      console.log("This User", this.currentUser);
       return this.id;
     }).toPromise().then(id=>id);
+ 
   }
 
 

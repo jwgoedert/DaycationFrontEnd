@@ -1,17 +1,22 @@
 <!--WelcomeTitleBlock-->
-<h1> Welcome{{this.signupService.currentUser}}</h1>
+<h1 id="welcome"> Welcome{{user}}</h1>
 <!--Display current chosen amount from scroll bar-->
 <h1 class="currentAmount">{{currentAmount}}</h1>
 <!--Choice wheel or slider, start with buttons-->
 <!--Create view, food, and move buttons-->
-<button type="button" primary class="btn btn-danger" style="width:30%">View</button>
-<button type="button" primary class="btn btn-danger" style="width:30%">Food</button>
-<button type="button" primary class="btn btn-danger" style="width:30%">Move</button>
+<div style="text-align:center">
+<div ></div>
+<button  class="options" md-raised-button>View</button>
+<div ></div>
+<button  class="options" md-raised-button>Food</button>
+<div ></div>
+<button  class="options" md-raised-button>Move</button>
 
 <!--Choose and go buttons-->
-<button type="button" primary class="btn btn-success" style="width:40%" routerLink="/choices" >Choices</button>
-<button type="button" primary class="btn btn-success" style="width:40%" routerLink="/mytrips" >Go!</button>
-
+<div ></div>
+<button  class="navigate" md-raised-button routerLink="/choices" >Choices</button>
+<button  class="navigate" md-raised-button routerLink="/mytrips" >Go!</button>
+</div>
 
 <!--Toolbar with profile, current, mytrips, likes-->
 
