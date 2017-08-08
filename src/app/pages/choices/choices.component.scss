@@ -1,6 +1,8 @@
 .tripChoice{
-width:25%;
-margin-bottom: 3px;
+max-width: 200px;
+  background-color: pink;
+  margin-bottom: 2px;
+// margin-bottom: 3px;
 
 }
 #welcome{
@@ -87,4 +89,8 @@ margin-bottom: 3px;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+md-chip{
+  max-width: 200px;
+  background-color: pink;
 }
