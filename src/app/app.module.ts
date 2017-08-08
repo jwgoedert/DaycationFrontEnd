@@ -22,6 +22,8 @@ import { ChoicesComponent } from './pages/choices/choices.component';
 import { SignupService } from './shared/services/signup.service';
 import { TestsService } from './shared/services/tests.service';
 import { AuthenticationService } from './shared/services/authentication.service';
+import { TripService } from './shared/services/trip.service';
+
 import { routing } from './app.routing';
 
 
@@ -51,7 +53,7 @@ import { routing } from './app.routing';
     TestsService,
     AuthenticationService,
     SignupService,
-
+    TripService,
   ],
   bootstrap: [AppComponent]
 })

@@ -38,11 +38,16 @@
           Moves 
       </ng2-dropdown-button>
       <ng2-dropdown-menu>
-          <ng2-menu-item [preventClose]='true' *ngFor="let move of moves  ">
+          <ng2-menu-item [preventClose]='true' *ngFor="let move of moves">
               {{ move }}
           </ng2-menu-item>
           <div class='ng2-menu-divider'></div>
       </ng2-dropdown-menu>
   </ng2-dropdown>
+<div>
+  <md-slider min="1" max="5" step="0.5" value="1.5"></md-slider>
+</div>
+  <button  class="navigate" md-raised-button routerLink="/dashboard" >Go!</button>
+
     
 </div>

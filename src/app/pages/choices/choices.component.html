@@ -1,3 +1,23 @@
-<p>
-  choices works!
-</p>
+<h1 class="titleBlock">My Trips</h1>
+<!--ngFor of possible trips with icons on each and button to view-->
+
+<!--Toolbar with profile, current, mytrips, likes-->
+
+<button  class="navigate" md-raised-button color="primary" routerLink="/mytrips" ></button>
+<div >
+  <ul>
+    <li *ngFor="let choice of choices">
+      
+<button  class="tripChoice" md-raised-button color="primary" routerLink="/mytrips" >{{choice}}</button>      
+    </li>
+  </ul>
+  <!-- <md-grid-list cols="4" rowHeight="100px">
+  <md-grid-tile
+      *ngFor="let choice of choices"
+      [colspan]="tile.cols"
+      [rowspan]="tile.rows"
+      [style.background]="tile.color">
+    {{choice}}
+  </md-grid-tile>
+</md-grid-list> -->
+</div>

@@ -6,6 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-trips.component.scss']
 })
 export class MyTripsComponent implements OnInit {
+  //test data for trip options
+  trips=[['Stop1','Stop1','Stop1'],['Stop1','Stop1','Stop1'],['Stop1','Stop1','Stop1'],['Stop1','Stop1','Stop1'],
+['Stop1','Stop1','Stop1'],['Stop1','Stop1','Stop1'],['Stop1','Stop1','Stop1'],['Stop1','Stop1','Stop1'],
+['Stop1','Stop1','Stop1'],['Stop1','Stop1','Stop1'],['Stop1','Stop1','Stop1'],['Stop1','Stop1','Stop1'],
+['Stop1','Stop1','Stop1'],['Stop1','Stop1','Stop1'],['Stop1','Stop1','Stop1'],['Stop1','Stop1','Stop1'],
+['Stop1','Stop1','Stop1'],['Stop1','Stop1','Stop1'],['Stop1','Stop1','Stop1'],['Stop1','Stop1','Stop1']];
+
 
   constructor() { }
 
