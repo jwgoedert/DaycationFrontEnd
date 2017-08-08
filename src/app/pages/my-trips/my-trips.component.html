@@ -2,3 +2,15 @@
 <!--ngFor of possible trips with icons on each and button to view-->
 
 <!--Toolbar with profile, current, mytrips, likes-->
+
+<button  class="navigate" md-raised-button routerLink="/mytrips" ></button>
+<div >
+  <ul>
+    <li *ngFor="let trip of trips">
+      
+<button  class="tripChoice" md-raised-button routerLink="/mytrips" routerLink="/trip-preview" >
+  {{trip}}
+</button>      
+    </li>
+  </ul>
+</div>

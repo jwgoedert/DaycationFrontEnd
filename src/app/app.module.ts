@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { MaterialModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Ng2DropdownModule } from 'ng2-material-dropdown';
 
 
 import { AppComponent } from './app.component';
@@ -21,6 +22,8 @@ import { ChoicesComponent } from './pages/choices/choices.component';
 import { SignupService } from './shared/services/signup.service';
 import { TestsService } from './shared/services/tests.service';
 import { AuthenticationService } from './shared/services/authentication.service';
+import { TripService } from './shared/services/trip.service';
+
 import { routing } from './app.routing';
 
 
@@ -44,12 +47,13 @@ import { routing } from './app.routing';
     FormsModule,
     MaterialModule,
     BrowserAnimationsModule,
+    Ng2DropdownModule,
   ],
   providers: [
     TestsService,
     AuthenticationService,
     SignupService,
-
+    TripService,
   ],
   bootstrap: [AppComponent]
 })
