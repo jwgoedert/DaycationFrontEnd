@@ -3,6 +3,7 @@ import { Routes, RouterModule} from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { SignupComponent } from './pages/signup/signup.component';
+import { LoginComponent } from './pages/login/login.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { MyTripsComponent } from './pages/my-trips/my-trips.component';
 import { TripPreviewComponent } from './pages/trip-preview/trip-preview.component';
@@ -14,44 +15,49 @@ import { ChoicesComponent } from './pages/choices/choices.component';
 
 const appRoutes: Routes = [
   {
-    path:'',
+    path: '',
     component: SignupComponent,
   },
   {
-    path:'dashboard',
+    path: 'dashboard',
     component: DashboardComponent,
   },
   {
-    path:'mytrips',
+    path: 'mytrips',
     component: MyTripsComponent,
   },
-   {
-    path:'profile',
+  {
+    path: 'profile',
     component: ProfileComponent,
   },
   {
-    path:'signup',
+    path: 'signup',
     component: SignupComponent,
   },
   {
-    path:'trip-preview',
+    path: 'login',
+    component: LoginComponent,
+  },
+  {
+    path: 'trip-preview',
     component: TripPreviewComponent,
   },
   {
-    path:'trip-viewer',
+    path: 'trip-viewer',
     component: TripViewerComponent,
   },
   {
-    path:'tests',
+    path: 'tests',
     component: TestsComponent,
-  },{
-    path:'likes',
-    component: LikesComponent,
-  },{
-    path:'choices',
-    component: ChoicesComponent,
   },
+  {
+    path: 'likes',
+    component: LikesComponent,
+  },
+  {
+    path: 'choices',
+    component: ChoicesComponent,
+  }
+];
 
-
-]
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
