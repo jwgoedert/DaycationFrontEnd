@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TripService } from '../../shared/services/trip.service';
 
 @Component({
   selector: 'app-my-trips',
@@ -6,17 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-trips.component.scss']
 })
 export class MyTripsComponent implements OnInit {
-  //test data for trip options
-  trips=[['Stop1','Stop1','Stop1'],['Stop1','Stop1','Stop1'],['Stop1','Stop1','Stop1'],['Stop1','Stop1','Stop1'],
-['Stop1','Stop1','Stop1'],['Stop1','Stop1','Stop1'],['Stop1','Stop1','Stop1'],['Stop1','Stop1','Stop1'],
-['Stop1','Stop1','Stop1'],['Stop1','Stop1','Stop1'],['Stop1','Stop1','Stop1'],['Stop1','Stop1','Stop1'],
-['Stop1','Stop1','Stop1'],['Stop1','Stop1','Stop1'],['Stop1','Stop1','Stop1'],['Stop1','Stop1','Stop1'],
-['Stop1','Stop1','Stop1'],['Stop1','Stop1','Stop1'],['Stop1','Stop1','Stop1'],['Stop1','Stop1','Stop1']];
+  public prefs: Array<Array<String>>;
 
+  constructor(
+    public tripService: TripService,
 
-  constructor() { }
+  ) {
+    this.prefs = [this.tripService.eventChoices, this.tripService.foodChoices, this.tripService.transportationChoices];
+  }
 
   ngOnInit() {
+    console.log(this.tripService.eventChoices);
   }
 
 }
