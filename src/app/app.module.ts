@@ -6,6 +6,8 @@ import { FormsModule } from '@angular/forms';
 import { MaterialModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Ng2DropdownModule } from 'ng2-material-dropdown';
+import { L_SEMANTIC_UI_MODULE } from 'angular2-semantic-ui';
+
 
 
 import { AppComponent } from './app.component';
@@ -55,6 +57,7 @@ import { ToolbarComponent } from './pages/toolbar/toolbar.component';
     MaterialModule,
     BrowserAnimationsModule,
     Ng2DropdownModule,
+    L_SEMANTIC_UI_MODULE,
   ],
   providers: [
     TestsService,
