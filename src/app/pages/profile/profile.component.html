@@ -7,9 +7,18 @@
 <!--Toolbar with profile, current, mytrips, likes-->
 <div class="category">
   <h1>Profile</h1>
+<md-grid-list cols="4" rowHeight="50px">
+  <md-grid-tile
+    class="tiles"
+      *ngFor="let view of views"
+      [colspan]="1"
+      [rowspan]="1"
+      >
+       <button  class="navigate" md-raised-button routerLink="/dashboard" >{{view}}</button>
+  </md-grid-tile>
+</md-grid-list>
 
-
-  <ng2-dropdown class="category">
+  <!-- <ng2-dropdown class="category">
       <ng2-dropdown-button class="category">
           Views
       </ng2-dropdown-button>
@@ -43,8 +52,8 @@
           </ng2-menu-item>
           <div class='ng2-menu-divider'></div>
       </ng2-dropdown-menu>
-  </ng2-dropdown>
-<div>
+  </ng2-dropdown> -->
+<div> 
   <md-slider min="1" max="5" step="0.5" value="1.5"></md-slider>
 </div>
   <button  class="navigate" md-raised-button routerLink="/dashboard" >Go!</button>

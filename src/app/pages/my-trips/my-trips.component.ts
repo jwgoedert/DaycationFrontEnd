@@ -9,6 +9,13 @@ import { TripService } from '../../shared/services/trip.service';
 export class MyTripsComponent implements OnInit {
   public prefs: Array<Array<String>>;
 
+  private selectedColor: string;
+  private selectedPerson: any;
+  private selectedPersons: Array<any> = [];
+  private colors: Array<string> = [];
+  private persons: Array<any> = [];
+  private fieldForShow: string;
+
   constructor(
     public tripService: TripService,
 
