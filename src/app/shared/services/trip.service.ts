@@ -1,4 +1,4 @@
-import{Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 
 @Injectable()
 export class TripService {
@@ -8,8 +8,9 @@ export class TripService {
   public eventChoices: Array<String>;
   public foodChoices: Array<String>;
   public transPortChoices: Array<String>;
+
   constructor(
-  ) { 
+  ) {
     this.events =
     [
     'airport',
@@ -96,8 +97,8 @@ export class TripService {
     'travel_agency',
     'university',
     'zoo'];
-  this.move=["bike","walk","drive","bus"
-  ]
+  this.move = ['bike', 'walk', 'drive', 'bus'
+  ];
   }
-  
+
 }

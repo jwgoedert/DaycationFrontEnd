@@ -1,5 +1,5 @@
 <!--WelcomeTitleBlock-->
-<h1 id="welcome"> Welcome{{user}}</h1>
+<h1 id="welcome"> Welcome {{user}}</h1>
 <!--Display current chosen amount from scroll bar-->
 <h1 class="currentAmount">{{currentAmount}}</h1>
 <!--Choice wheel or slider, start with buttons-->
@@ -16,6 +16,8 @@
 <div ></div>
 <button  class="navigate" md-raised-button routerLink="/choices" >Choices</button>
 <button  class="navigate" md-raised-button routerLink="/mytrips" >Go!</button>
+
+<app-toolbar></app-toolbar>
 </div>
 
 <!--Toolbar with profile, current, mytrips, likes-->

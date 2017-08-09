@@ -21,8 +21,6 @@ export class LoginComponent implements OnInit {
   }
   async onSubmit(logInForm: NgForm) {
     this.id = await this.logInService.loginUser(logInForm.value.name, logInForm.value.password);
-    console.log('THIS IS ...', this.id);
-    console.log('id', this.id);
     if (this.id > 0) {
       this.router.navigate(['dashboard']);
     } else {
