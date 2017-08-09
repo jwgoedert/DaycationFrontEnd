@@ -3,14 +3,17 @@
 
 <!--Toolbar with profile, current, mytrips, likes-->
 
-<button  class="navigate" md-raised-button routerLink="/mytrips" ></button>
-<div >
+<button class="navigate" md-raised-button routerLink="/mytrips"></button>
+
+<div *ngFor="let pref of prefs">
+  <h4> {{pref}}</h4>
+</div>
+<div>
   <ul>
     <li *ngFor="let trip of trips">
-      
-<button  class="tripChoice" md-raised-button routerLink="/mytrips" routerLink="/trip-preview" >
+      <button class="tripChoice" md-raised-button routerLink="/mytrips" routerLink="/trip-preview">
   {{trip}}
-</button>      
+</button>
     </li>
   </ul>
 </div>

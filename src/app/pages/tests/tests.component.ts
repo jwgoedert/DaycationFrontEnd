@@ -25,7 +25,8 @@ export class TestsComponent implements OnInit {
     return this.testsService.seedTest();
   }
   signUpTest2(){
-    return this.testsService.signUpTest();
+    // return this.testsService.signUpTest();
+    return this.testsService.httpTest();
   }
 
 }

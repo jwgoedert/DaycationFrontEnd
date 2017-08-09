@@ -13,6 +13,7 @@ exports.config = {
   },
   directConnect: true,
   baseUrl: 'http://localhost:4200/',
+  // baseUrl: 'https://ce9e9b87.ngrok.io',
   framework: 'jasmine',
   jasmineNodeOpts: {
     showColors: true,

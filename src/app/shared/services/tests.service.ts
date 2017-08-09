@@ -7,7 +7,10 @@ import { Subscription } from 'rxjs/Subscription';
 export class TestsService {
 
   private headers = new Headers({ 'Content-Type': 'application/json' });
-  private heroesUrl = 'http://localhost:8080/v1';  // URL to web api
+  private heroesUrl = 'http://localhost:8080/v1'
+  // private heroesUrl = 'http://httpbin.org/ip'
+
+//'http://localhost:8080/v1';  // URL to web api
   constructor(
     public http: Http,
     private router: Router,
@@ -27,8 +30,17 @@ export class TestsService {
       }).subscribe(newinfo => {
         return newinfo;
       })
-
   }
+  httpTest(): Subscription {
+    return this.http
+      .get(`${this.heroesUrl}`).map(info => {
+        console.log(info);
+        return info;
+      }).subscribe(newinfo => {
+        return newinfo;
+      })
+  }
+  
   signUpTest(): Subscription {
     return this.http
       .post(`${this.heroesUrl}/signup?user=jamestest4&pass=jamestest4`, Headers).map(info => {
