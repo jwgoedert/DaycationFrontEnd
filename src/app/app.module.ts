@@ -31,6 +31,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { Config } from '../config';
 import { ToolbarComponent } from './pages/toolbar/toolbar.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,9 +60,9 @@ import { ToolbarComponent } from './pages/toolbar/toolbar.component';
     TestsService,
     AuthenticationService,
     SignupService,
-    TripService,
     LogInService,
     Config,
+    TripService,
   ],
   bootstrap: [AppComponent]
 })

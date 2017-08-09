@@ -9,7 +9,7 @@ import { Config } from '../../../config';
 export class LogInService {
   private headers = new Headers({ 'Content-Type': 'application/json' });
   public id: number;
-  
+
   constructor(
     public http: Http,
     public router: Router,
