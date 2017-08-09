@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TripService } from '../../shared/services/trip.service';
 
 @Component({
   selector: 'app-choices',
@@ -6,8 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./choices.component.scss']
 })
 export class ChoicesComponent implements OnInit {
-
-  constructor() { }
+  public choices:Array<String>;
+  constructor(
+    public tripService:TripService,
+  ) { 
+    this.choices = tripService.events;
+  }
 
   ngOnInit() {
   }

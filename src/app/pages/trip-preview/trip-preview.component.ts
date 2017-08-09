@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./trip-preview.component.scss']
 })
 export class TripPreviewComponent implements OnInit {
-
+  stops=['stop1','stop2','stop3','stop4','stop5','stop6']
   constructor() { }
 
   ngOnInit() {
