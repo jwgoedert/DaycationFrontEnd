@@ -7,20 +7,21 @@ import { TripService } from '../../shared/services/trip.service';
   styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
-public views:Array<String>;
+public views: Array<String>;
 foods = ['Creole', 'Cajun', 'Mexican', 'Italian'];
-moves = ['Car','Walk','Bike','Bus'];
+moves = ['Car', 'Walk', 'Bike', 'Bus'];
 
   constructor(
-    public tripService: TripService,) { 
+    public tripService: TripService,
+  ) {
     this.views = this.tripService.events;
   }
 
   ngOnInit() {
     console.log(this.views);
   }
-test3Clicked(){
-  console.log("Test three clicked officially");
+test3Clicked() {
+  console.log('Test three clicked officially');
 
 }
 }
