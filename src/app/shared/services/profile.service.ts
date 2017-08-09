@@ -19,7 +19,7 @@ export class ProfileService {
     this.http = http;
     this.config = config;
   }
-  public addPreferences(username: String, password: String): Promise<number> {
+  public loginUser(username: String, password: String): Promise<number> {
     return this.http
       .post(`${this.config.serverUrl}/login?user=${username}&pass=${password}`, this.headers)
       .map(user => {

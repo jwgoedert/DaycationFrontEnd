@@ -8,7 +8,7 @@ import { TripService } from '../../shared/services/trip.service';
 })
 export class ProfileComponent implements OnInit {
 public views: Array<String>;
-foods = ['Creole', 'Cajun', 'Mexican', 'Italian'];
+foods  = ['Creole', 'Cajun', 'Mexican', 'Italian'];
 moves = ['Car', 'Walk', 'Bike', 'Bus'];
 
   constructor(
