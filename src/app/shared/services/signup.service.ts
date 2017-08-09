@@ -8,7 +8,7 @@ import { Config } from '../../../config';
 @Injectable()
 export class SignupService {
   private headers = new Headers({'Content-Type': 'application/json'});
-  private dbUrl = 'https://3cdc0929.ngrok.io/v1'; // ||'http://localhost:8080/v1';  // URL to web api
+  // private dbUrl = 'https://3cdc0929.ngrok.io/v1'; // ||'http://localhost:8080/v1';  // URL to web api
   public id: number;
   constructor(
     public http: Http,
