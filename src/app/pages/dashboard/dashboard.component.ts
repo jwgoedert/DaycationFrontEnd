@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SignupService } from '../../shared/services/signup.service';
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -7,16 +7,13 @@ import { SignupService } from '../../shared/services/signup.service';
 })
 export class DashboardComponent implements OnInit {
   public user: String;
-  
 
   constructor(
-    public signupService: SignupService,
   ) {
-    this.signupService = signupService;
    }
 
   ngOnInit() {
-    this.user = ` ${this.signupService.currentUser}`;
+    this.user = JSON.parse(localStorage.getItem('user'))[0].name;
   }
 
 }

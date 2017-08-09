@@ -29,6 +29,8 @@ import { routing } from './app.routing';
 import { LoginComponent } from './pages/login/login.component';
 
 import { Config } from '../config';
+import { ToolbarComponent } from './pages/toolbar/toolbar.component';
+
 
 @NgModule({
   declarations: [
@@ -43,6 +45,7 @@ import { Config } from '../config';
     LikesComponent,
     ChoicesComponent,
     LoginComponent,
+    ToolbarComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,7 +63,6 @@ import { Config } from '../config';
     LogInService,
     Config,
     TripService,
-
   ],
   bootstrap: [AppComponent]
 })

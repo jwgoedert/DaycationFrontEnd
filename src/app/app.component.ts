@@ -18,7 +18,7 @@ export class AppComponent {
     public sanitizer: DomSanitizer,
     private router: Router,
   ) {
-  this.router = router;  
+  this.router = router;
   this.iconRegistry.addSvgIcon(
     'thumbs-up',
     this.sanitizer.bypassSecurityTrustResourceUrl('assets/img/examples/thumbup-icon.svg'));

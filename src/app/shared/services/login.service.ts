@@ -9,7 +9,7 @@ import { Config } from '../../../config';
 export class LogInService {
   private headers = new Headers({ 'Content-Type': 'application/json' });
   public id: number;
-  // public currentUser: String;
+
   constructor(
     public http: Http,
     public router: Router,
@@ -23,7 +23,6 @@ export class LogInService {
     return this.http
       .post(`${this.config.serverUrl}/login?user=${username}&pass=${password}`, this.headers)
       .map(user => {
-        console.log('user', user);
         this.id = JSON.parse(user['_body']).length ? JSON.parse(user['_body'])[0].id : 0;
         localStorage.setItem('user', user['_body']);
         return this.id;
