@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ModuleWithProviders, NgModule } from '@angular/core';
-import { HttpModule }    from '@angular/http';
+import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { MaterialModule } from '@angular/material';
@@ -20,12 +20,15 @@ import { LikesComponent } from './pages/likes/likes.component';
 import { ChoicesComponent } from './pages/choices/choices.component';
 
 import { SignupService } from './shared/services/signup.service';
+import { LogInService } from './shared/services/login.service';
 import { TestsService } from './shared/services/tests.service';
 import { AuthenticationService } from './shared/services/authentication.service';
 import { TripService } from './shared/services/trip.service';
 
 import { routing } from './app.routing';
+import { LoginComponent } from './pages/login/login.component';
 
+import { Config } from '../config';
 
 @NgModule({
   declarations: [
@@ -39,6 +42,7 @@ import { routing } from './app.routing';
     TestsComponent,
     LikesComponent,
     ChoicesComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,7 +57,10 @@ import { routing } from './app.routing';
     TestsService,
     AuthenticationService,
     SignupService,
+    LogInService,
+    Config,
     TripService,
+
   ],
   bootstrap: [AppComponent]
 })
