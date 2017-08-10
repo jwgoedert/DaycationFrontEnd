@@ -5,6 +5,7 @@ export class TripService {
   public events: Array<String>;
   public foods: Array<String>;
   public moves: Array<String>;
+  public mappedEvents: Array<Object>;
   public eventChoices: Array<String>;
   public foodChoices: Array<String>;
   public transportationChoices: Array<String>;
@@ -64,6 +65,13 @@ export class TripService {
       'Pasta',
       'Hot Dogs'
     ];
+    this.mappedEvents = this.events.map(item => {
+      const eventObj = {
+        event: item,
+        selected: false
+      };
+      return eventObj;
+    });
   }
 
 }

@@ -1,39 +1,28 @@
 <h1 class="titleBlock">Chose {{currentChoice}}</h1>
+<!-- <h4 *ngFor="let choose of chosen">{{choose}}</h4> -->
+
 <div>
-  <h1 *ngIf="place==1">IF Works</h1>
+  <!-- <h1 *ngIf="place==1">IF Works</h1> -->
 
   <div *ngIf="place==0">
-    <!-- <md-card>
-      <h4 *ngFor="let choose of chosen">{{choose}}</h4>
-    </md-card>
-    <md-card>
-      <button class="navigate" md-raised-button color="primary" (click)="nextStep()">Next</button>
-      <md-chip-list selectable="true">
-        <md-chip color="primary" class="tripChoice" *ngFor="let choice of tripService.events" (click)="printName(choice); addToChosen(choice);">{{choice}}</md-chip>
-      </md-chip-list>
-    </md-card> -->
  <md-grid-list cols="4" rowHeight="50px">
+         <!-- <h4 *ngFor="let choose of chosen">{{choose}}</h4> -->
+
   <md-grid-tile
     class="tiles"
       *ngFor="let choice of tripService.events"
       [colspan]="1"
       [rowspan]="1"
+      (click)="toggleColor(choice); addToChosen(choice);"
       >
-       <button  class="navigate" md-raised-button routerLink="/dashboard" >{{choice}}</button>
+        <!-- <button  [ngStyle]="{'background-color': selected}"class="navigate {{selected}}" md-raised-button >{{choice}}</button>  -->
+        <button  [ngStyle]="{'background-color': selected}"class="navigate {{selected}}" md-raised-button >{{choice}}</button> 
+        <!-- <button  [ngStyle]="{'background-color': selected}"class="navigate {{selected}}" md-raised-button (click)="printName(choice); addToChosen(choice);">{{choice}}</button>  -->
   </md-grid-tile>
 </md-grid-list>
   </div>
 
   <div *ngIf="place==1">
-    <!-- <md-card>
-      <h4 *ngFor="let choose of chosen">{{choose}}</h4>
-    </md-card>
-    <md-card>
-      <button class="navigate" md-raised-button color="primary" (click)="nextStep()">Next</button>
-      <md-chip-list selectable="true">
-        <md-chip color="primary" class="tripChoice" *ngFor="let choice of tripService.foods" (click)="printName(choice); addToChosen(choice);">{{choice}}</md-chip>
-      </md-chip-list>
-    </md-card> -->
     <md-grid-list cols="4" rowHeight="50px">
   <md-grid-tile
     class="tiles"
@@ -41,21 +30,12 @@
       [colspan]="1"
       [rowspan]="1"
       >
-       <button  class="navigate" md-raised-button routerLink="/dashboard" >{{choice}}</button>
+       <button  class="navigate" md-raised-button (click)="printName(choice); addToChosen(choice);" >{{choice}}</button>
   </md-grid-tile>
 </md-grid-list>
   </div>
 
   <div *ngIf="place==2">
-    <!-- <md-card>
-      <h4 *ngFor="let choose of chosen">{{choose}}</h4>
-    </md-card>
-    <md-card>
-      <button class="navigate" md-raised-button color="primary" (click)="nextStep()">Next</button>
-      <md-chip-list selectable="true">
-        <md-chip color="primary" class="tripChoice" *ngFor="let choice of tripService.moves" (click)="printName(choice); addToChosen(choice);">{{choice}}</md-chip>
-      </md-chip-list>
-    </md-card> -->
  <md-grid-list cols="4" rowHeight="50px">
   <md-grid-tile
     class="tiles"
@@ -63,7 +43,7 @@
       [colspan]="1"
       [rowspan]="1"
       >
-       <button  class="navigate" md-raised-button routerLink="/dashboard" >{{choice}}</button>
+       <button  class="navigate" md-raised-button (click)="printName(choice); addToChosen(choice);" >{{choice}}</button>
   </md-grid-tile>
 </md-grid-list>
     
@@ -71,6 +51,6 @@
       <button class="navigate" md-raised-button color="primary" (click)="nextStep()">Next</button>
 
 </div>
-<div>
-<!-- <app-toolbar></app-toolbar> -->
+<div>x
+ <app-toolbar></app-toolbar> 
 </div>

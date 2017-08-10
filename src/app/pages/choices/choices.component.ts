@@ -10,20 +10,26 @@ import { Router } from '@angular/router';
 })
 export class ChoicesComponent implements OnInit {
   public eventChoices: Array<String>;
+  public mappedEventChoices: Array<Object>;
   public chosen: Array<String>;
   public place: number;
+  public selected: String;
   constructor(
     public tripService: TripService,
     public router: Router,
   ) {
     this.router = router;
     this.eventChoices = tripService.events;
+    this.mappedEventChoices = tripService.mappedEvents;
     this.chosen = [];
     this.place = 0;
+    this.selected = 'red';
   }
-  printName(name) {
+  toggleColor(name) {
     console.log('leChip', name);
-
+   this.selected === 'red' ? this.selected = 'orange' : this.selected = 'red';
+    console.log('buttonColor', this.selected);
+    console.log(this);
   }
   addToChosen(name) {
     console.log('name in Chosen', name);

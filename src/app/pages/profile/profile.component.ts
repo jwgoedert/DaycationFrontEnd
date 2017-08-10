@@ -18,7 +18,6 @@ export class ProfileComponent implements OnInit {
   public counter: number = 0;
   public check: string;
   public message: string;
-  
   constructor(
     public tripService: TripService,
     public profileService: ProfileService,

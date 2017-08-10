@@ -4,5 +4,22 @@
 @import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
 
 body{
-  background-color: lightblue;
+  background-color: #B2B797;
 }
+.md-button-toggle-checked .md-button-toggle-label-content{ background-color:#FD9728 !important; }
+
+// $colors: (
+//   primary:   teal,
+//   secondary:  #32db64,
+//   danger:     #f53d3d,
+//   light:      #f4f4f4,
+//   dark:       #222
+// );
+
+$colors: (
+  primary:   #E2EE8B,
+  secondary:  #DBF336,
+  danger:     #0BEE6E,
+  light:      #04B483,
+  dark:       #0073A0
+);
