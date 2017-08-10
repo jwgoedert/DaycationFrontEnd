@@ -8,9 +8,14 @@
           *ngFor="let choice of tripService.mappedEvents"
           [colspan]="1"
           [rowspan]="1"
-          (click)="toggleColor(choice); addToChosen(choice);"
       >
-      <button class="navigate" [ngClass]="{'selected': choice.selected}" md-raised-button >{{choice.event}}</button> 
+      <button 
+        class="navigate" 
+        [ngClass]="{'selected': choice.selected}" 
+        (click)="toggleColor(choice); addToChosen(choice);" 
+        md-raised-button >
+        {{choice.event}}
+      </button> 
       </md-grid-tile>
     </md-grid-list>
   </div>
@@ -18,12 +23,17 @@
   <div *ngIf="place==1">
     <md-grid-list cols="4" rowHeight="50px">
       <md-grid-tile
-          *ngFor="let choice of tripService.mappedFoods"
-          [colspan]="1"
-          [rowspan]="1"
-          (click)="toggleColor(choice); addToChosen(choice);"
+        *ngFor="let choice of tripService.mappedFoods"
+        [colspan]="1"
+        [rowspan]="1"
       >
-      <button class="navigate" [ngClass]="{'selected': choice.selected}" md-raised-button >{{choice.food}}</button> 
+      <button 
+        class="navigate"
+        [ngClass]="{'selected': choice.selected}" 
+        md-raised-button 
+        (click)="toggleColor(choice); addToChosen(choice);">
+        {{choice.food}}
+      </button> 
       </md-grid-tile>
     </md-grid-list>
   </div>
@@ -31,18 +41,25 @@
   <div *ngIf="place==2">
      <md-grid-list cols="4" rowHeight="50px">
       <md-grid-tile
-          *ngFor="let choice of tripService.mappedMoves"
-          [colspan]="1"
-          [rowspan]="1"
-          (click)="toggleColor(choice); addToChosen(choice);"
+        *ngFor="let choice of tripService.mappedMoves"
+        [colspan]="1"
+        [rowspan]="1"
       >
-      <button class="navigate" [ngClass]="{'selected': choice.selected}" md-raised-button >{{choice.transportation}}</button> 
+      <button 
+        class="navigate"
+        [ngClass]="{'selected': choice.selected}" 
+        md-raised-button 
+        (click)="toggleColor(choice); addToChosen(choice);">
+        {{choice.transportation}}
+      </button> 
       </md-grid-tile>
     </md-grid-list>   
   </div>
-      <button class="navigate" md-raised-button color="primary" (click)="nextStep()">Next</button>
-
+      <button 
+      class="navigate"
+      md-raised-button color="primary" 
+      (click)="nextStep()">Next</button>
 </div>
-<div>x
+<div>
  <app-toolbar></app-toolbar> 
 </div>

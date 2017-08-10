@@ -23,7 +23,6 @@ export class ChoicesComponent implements OnInit {
     this.mappedEventChoices = tripService.mappedEvents;
     this.chosen = [];
     this.place = 0;
-    this.selected = 'red';
   }
 
   toggleColor(name) {
@@ -32,7 +31,11 @@ export class ChoicesComponent implements OnInit {
   addToChosen(name) {
     this.chosen.push(name);
     if (this.place === 0) {
-    this.tripService.eventChoices.push(name);
+      if (this.tripService.eventChoices.length <= 5) {
+      this.tripService.eventChoices.push(name);
+      } else {
+
+      }
     }
     if (this.place === 1) {
     this.tripService.foodChoices.push(name);

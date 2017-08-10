@@ -23,3 +23,35 @@ $colors: (
   light:      #04B483,
   dark:       #0073A0
 );
+    $mys1: #67D0C1;
+    $mys2: #B2B797;
+    $mys3: #FD9728;
+    $mys4: #DB4F04;
+    $mys5: #092940;
+#welcome{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align:center;
+}
+
+.navigate{
+    background-color: $mys1;
+    color: $mys5;
+    position: center;
+    justify-content: center;
+    width:30%;
+    text-align:center;
+    font-size: 15px;
+    font-family:  Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding-bottom: 1.5em;
+    margin: auto;
+    min-width: 150%
+    // margin-bottom: 8px;
+}
+.backdrop{
+    background-color: #67D0C1;
+    
+}
+.selected{
+    // background-color: #67D0C1;
+    background-color: $mys3;
+}
