@@ -25,11 +25,15 @@ export class ChoicesComponent implements OnInit {
     this.place = 0;
     this.selected = 'red';
   }
+  // toggleColor(name) {
+  //   console.log('leChip', name);
+  //  this.selected === 'red' ? this.selected = 'orange' : this.selected = 'red';
+  //   console.log('buttonColor', this.selected);
+  //   console.log(this);
+  // }
   toggleColor(name) {
-    console.log('leChip', name);
-   this.selected === 'red' ? this.selected = 'orange' : this.selected = 'red';
-    console.log('buttonColor', this.selected);
-    console.log(this);
+    name.selected ? name.selected = false : name.selected = true;
+    console.log('name:', name);
   }
   addToChosen(name) {
     console.log('name in Chosen', name);

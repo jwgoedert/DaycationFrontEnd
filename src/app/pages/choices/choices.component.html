@@ -9,14 +9,15 @@
          <!-- <h4 *ngFor="let choose of chosen">{{choose}}</h4> -->
 
   <md-grid-tile
-    class="tiles"
-      *ngFor="let choice of tripService.events"
+    class="tiles navigation"
+      *ngFor="let choice of tripService.mappedEvents"
       [colspan]="1"
       [rowspan]="1"
       (click)="toggleColor(choice); addToChosen(choice);"
       >
         <!-- <button  [ngStyle]="{'background-color': selected}"class="navigate {{selected}}" md-raised-button >{{choice}}</button>  -->
-        <button  [ngStyle]="{'background-color': selected}"class="navigate {{selected}}" md-raised-button >{{choice}}</button> 
+        <!-- <button  [ngClass]="{'selected': choice.selected}"class="navigate {{selected}}" md-raised-button [(ngModel)]="choice.selected" >{{choice.event}}</button>  -->
+        <button  class="navigate" [ngClass]="{'selected': choice.selected}" md-raised-button >{{choice.event}}</button> 
         <!-- <button  [ngStyle]="{'background-color': selected}"class="navigate {{selected}}" md-raised-button (click)="printName(choice); addToChosen(choice);">{{choice}}</button>  -->
   </md-grid-tile>
 </md-grid-list>
