@@ -27,17 +27,14 @@ export class TripService {
         'cemetery',
         'church',
         'embassy',
-        'establishment',
         'food',
         'hindu_temple',
         'library',
-        'lodging',
         'mosque',
         'movie_theater',
         'museum',
         'night_club',
         'park',
-        'place_of_worship',
         'restaurant',
         'shopping_mall',
         'spa',
@@ -46,8 +43,27 @@ export class TripService {
         'synagogue',
         'university',
         'zoo'];
-    this.moves = ['bike', 'walk', 'car', 'bus'];
-    this.foods = ['mexican', 'creole', 'cajun', 'french', 'barbecue', 'pizza', 'street', 'foodtruck'];
+
+    this.moves = ['bike',
+      'walk',
+      'car',
+      'bus'];
+
+    this.foods = ['Mexican',
+      'Creole',
+      'Cajun',
+      'French',
+      'Barbecue',
+      'Pizza',
+      'Ice Cream',
+      'Steak',
+      'Burger',
+      'Chicken',
+      'Tacos',
+      'Sushi',
+      'Pasta',
+      'Hot Dogs'
+    ];
   }
 
 }

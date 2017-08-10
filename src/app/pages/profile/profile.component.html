@@ -1,62 +1,43 @@
-<!--Back Button, UserNames' Profile-->
-
-<!--Multiselect dropdown of View Choices-->
-<!--Multiselect dropdown of Food Choices-->
-<!--Multiselect dropdown of Move Choices-->
-
-<!--Toolbar with profile, current, mytrips, likes-->
 <div class="category">
-  <h1>Profile</h1>
-<md-grid-list cols="4" rowHeight="50px">
-  <md-grid-tile
-    class="tiles"
-      *ngFor="let view of views"
-      [colspan]="1"
-      [rowspan]="1"
-      >
-       <button  class="navigate" md-raised-button routerLink="/dashboard" >{{view}}</button>
-  </md-grid-tile>
-</md-grid-list>
-
-  <!-- <ng2-dropdown class="category">
-      <ng2-dropdown-button class="category">
-          Views
-      </ng2-dropdown-button>
-      <ng2-dropdown-menu>
-          <ng2-menu-item [preventClose]='true' *ngFor="let view of views">
-              {{ view }}
-          </ng2-menu-item>
-          <div class='ng2-menu-divider'></div>
-      </ng2-dropdown-menu>
-  </ng2-dropdown>
-    
-    <ng2-dropdown class="category">
-      <ng2-dropdown-button class="category">
-          Foods
-      </ng2-dropdown-button>
-      <ng2-dropdown-menu>
-          <ng2-menu-item [preventClose]='true' *ngFor="let food of foods">
-              {{ food }}
-          </ng2-menu-item>
-          <div class='ng2-menu-divider'></div>
-      </ng2-dropdown-menu>
-  </ng2-dropdown>
-    
-    <ng2-dropdown class="category">
-      <ng2-dropdown-button class="category">
-          Moves 
-      </ng2-dropdown-button>
-      <ng2-dropdown-menu>
-          <ng2-menu-item [preventClose]='true' *ngFor="let move of moves">
-              {{ move }}
-          </ng2-menu-item>
-          <div class='ng2-menu-divider'></div>
-      </ng2-dropdown-menu>
-  </ng2-dropdown> -->
-<div> 
-  <md-slider min="1" max="5" step="0.5" value="1.5"></md-slider>
+    <h1>Profile</h1>
+    <div  *ngIf="counter === 0">
+        <md-grid-list cols="4" rowHeight="50px">
+            <md-grid-tile
+                class="tiles"
+                *ngFor="let event of events"
+                [colspan]="1"
+                [rowspan]="1"
+            >
+            <button class="navigate" md-raised-button (click)="addEvent(event)" >{{event.replace('_', ' ')}}</button>
+            </md-grid-tile>
+        </md-grid-list>
+        <button md-raised-button (click)="next()" >Next</button>
+    </div>
+    <div *ngIf="counter === 1">
+        <md-grid-list cols="4" rowHeight="50px">
+            <md-grid-tile 
+                class="tiles"
+                *ngFor="let food of foods" 
+                [colspan]="1" 
+                [rowspan]="1"
+            >
+            <button class="navigate" md-raised-button (click)="addFood(food)">{{food}}</button>
+            </md-grid-tile>
+        </md-grid-list>
+        <button md-raised-button (click)="next()" >Next</button>
+    </div>
+    <div *ngIf="counter === 2">
+        <md-grid-list cols="4" rowHeight="50px">
+            <md-grid-tile 
+                class="tiles" 
+                *ngFor="let move of moves" 
+                [colspan]="1" 
+                [rowspan]="1">
+            <button class="navigate" md-raised-button (click)="addTransportation(move)">{{move}}</button>
+            </md-grid-tile>
+        </md-grid-list>
+        <button md-raised-button (click)="next()" >Next</button>    
+    </div>
 </div>
-  <button  class="navigate" md-raised-button routerLink="/dashboard" >Go!</button>
 
-</div>
 <app-toolbar></app-toolbar>

@@ -23,6 +23,7 @@ import { ChoicesComponent } from './pages/choices/choices.component';
 
 import { SignupService } from './shared/services/signup.service';
 import { LogInService } from './shared/services/login.service';
+import { ProfileService } from './shared/services/profile.service';
 import { TestsService } from './shared/services/tests.service';
 import { AuthenticationService } from './shared/services/authentication.service';
 import { TripService } from './shared/services/trip.service';
@@ -64,6 +65,7 @@ import { ToolbarComponent } from './pages/toolbar/toolbar.component';
     AuthenticationService,
     SignupService,
     LogInService,
+    ProfileService,
     Config,
     TripService,
   ],
